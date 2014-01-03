@@ -3,7 +3,8 @@
 ## Week 1 - Ruby
 
 #### Monday
-
+* [Source Control Made Easy](http://pragprog.com/screencasts/v-jwsceasy/source-control-made-easy)
+* [The Two Cultures of Computing](http://pgbovine.net/two-cultures-of-computing.htm)
 * [ZeroType - Typing to play](http://phoboslab.org/ztype/)
 * [Unix tips and tricks](http://www.onextrapixel.com/2013/10/09/unix-tips-tricks-to-save-you-time-in-terminal/)
 * [5 commands](http://spin.atomicobject.com/2013/09/09/5-unix-commands/)

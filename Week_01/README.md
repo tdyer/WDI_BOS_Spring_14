@@ -46,7 +46,7 @@
   <tr><!-- Quiz -->
     <td>9:00 - 9:30</td>
     <td><i>Intro and Class Culture</i></td>
-    <td>Github quiz</td>
+    <td><a href='https://github.com/tdyer/ga-git-hw'>Git Homework and Quiz</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -54,7 +54,7 @@
   <tr><!-- HW Review -->
     <td>9:30 - 10:00</td>
     <td><i>Intro and Class Culture</i></td>
-    <td>Github HW Review</td>
+    <td><a href='https://github.com/tdyer/ga-git-hw'>Git Homework and Quiz</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -99,44 +99,15 @@
   <tr> <!-- Assigned Homework -->
     <td>4:45 - 5:30</td> 
     <td>
-      <a href='https://github.com/tdyer/ga-git-hw'>Git Homework</a>
+      <a href='https://github.com/tdyer/ga-git-hw'>Git Homework and Quiz</a>
     </td>
     <td>Ruby Calculator</td>
     <td>MBTA Routes</td>
     <td>Appointment</td>
     <td>Happi Trails</td>
   </tr>
-  <tr><!-- Readings -->
-    <td>Readings</td>
-    <td>
-      <ul>
-        <li>
-          <a href="http://pragprog.com/screencasts/v-jwsceasy/source-control-made-easy">Source Control Made Easy</a>
-        </li>
-        <li>
-          <a href="http://pgbovine.net/two-cultures-of-computing.htm">Two Cultures of Computing</a>
-        </li>
-        <li>
-          <a href="http://phoboslab.org/ztype/">ZeroType - Typing to play</a>
-        </li>
-        <li>
-          <a href="http://www.onextrapixel.com/2013/10/09/unix-tips-tricks-to-save-you-time-in-terminal/">Unix tips and tricks</a>
-        </li>
-        <li>
-          <a href="http://spin.atomicobject.com/2013/09/09/5-unix-commands/">5 Unix commands</a>
-        </li>
-        <li>
-          <a href="http://explainshell.com/">Explain Shell</a>
-        </li>
-        <li>
-          <a href="http://jvns.ca/blog/2013/11/29/what-happens-when-you-run-a-unix-program/">What happens when you run Hello World</a>
-        </li>
-      </ul>
-    </td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
 </table>
+
+## [Readings](READING.md)
+
 
