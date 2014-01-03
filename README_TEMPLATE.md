@@ -1,13 +1,10 @@
-#Week 1 - Intro to Programming, Ruby
+#Week 1 - Main Topics
 
-###What did the class do last week?
+### Last Week Overview.
+- Github
+- Ruby Basics
 
-- Installfest
-- Prework
-
-
-###Where should students be by the end of this week?
-
+### Goals for this week.
 - Navigate and manipulate files in the command line
 - Create new repos on Github and fork/clone/commit/push/pull
 - Ruby
@@ -19,18 +16,10 @@
   - Blocks vs. procs vs. lambdas
   - Gems: installation and use
 - Debugging with pry
+- Bundler
 - TDD: Awareness and concepts of
 
-
-###How does this connect to next week?
-
-- Students are being prepared to write their own software with Ruby as a
-foundation.  They should understand enough about the language to begin learning
-backend web development with Sinatra and Rails.
-
-
-###Sample Topic Flow
-
+### Topics for this week.
 - Intro and class culture
 - Expanding on prework
   - Command Line
@@ -38,35 +27,81 @@ backend web development with Sinatra and Rails.
 - Ruby language
   - Variable types (numbers, floats, strings, boolean)
   - Conditions
-  - Loops
-  - Methods
-  - Arrays
-  - Symbols and hashes
-  - Blocks, Procs, & Lambdas
-  - Enumeration
-  - Objects and classes
-  - Require and multi-file projects
-  - Gems
 
-###Sample Flow
+### Week XX
 <table>
-<tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr>
-<tr><td>9:00</td></td><td>Quiz</td><td>Quiz</td><td>Quiz</td><td>Quiz</td><td>Quiz</td></tr>
-<tr><td>9:30</td><td>HW Review</td><td>HW Review</td><td>HW Review</td><td>HW Review</td><td>HW Review</td></tr>
-
+  <tr>
+    <th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th>
+  </tr>
+  <tr><!-- Quiz -->
+    <td>9:00 - 9:30</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr><!-- HW Review -->
+    <td>9:30 - 10:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr> <!-- AM Lesson/Lab -->
+    <td>10:00 - 12:30</td>
+    <td>
+      <ol>
+        <li>
+        </li>
+        <li>
+        </li>
+      </ol>
+    </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr> <!-- PM Lesson/Lab -->
+    <td>1:30 - 4:45</td>
+    <td>
+      <ol>
+        <li>
+        </li>
+        <li>
+        </li>
+      </ol>
+    </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr> <!-- Assigned Homework -->
+    <td>4:45 - 5:30</td> 
+    <td>
+    </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr><!-- Readings -->
+    <td>Readings</td>
+    <td>
+      <ul>
+        <li>
+        </li>
+        <li>
+        </li>
+      </ul>
+    </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 </table>
 
-[calc]: methods/ruby_calculator
-[subway]: symbols_hashes/labs/mta
-[apt]: objects_classes/labs/rental_app
-[happitails]: comprehensive_labs/animal_shelter
-
-###Instructional Notes
-- Build your culture from day one!
-  - Solidify students confidence and expectations
-- Students will come in with different comfort levels and experience so it's
-important to get everyone on the same page
-- They have done the prework so become familiar with it yourself.  You'll need
-to cover this again, but it won't be the first time they've seen it.
-- Consider including Rainbow as an easy intro to Gems.
-- Be aware of incorporating testing into these projects.  It's difficult to introduce testing while students are struggling to learn Ruby, but you can begin to introduce the idea through error driven development, or writing assignments using testing language.
