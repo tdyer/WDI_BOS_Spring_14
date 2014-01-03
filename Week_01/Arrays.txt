@@ -1,0 +1,243 @@
+Arrays
+size - size of array
+length - size of array
+
+==================================================
+Creation:
+a = Array.new
+a = []
+a = [ "the", "bird", 42, [], 77.78 ]
+# create an array that has 3 entries all pointing to the SAME string "abc"
+a = Array.new(3, "abc")
+# create an array of values [10, 20, 30]
+a = Array.new(3) { n += 1; n*10}
+
+==================================================
+Accessors
+a = [ 1, 2, 3, 4, 5]
+a[2]  # value is 3
+a[2,2] # value is [3,4]
+a[2,2] = [6, 7] # a is [1,2,6,7,5]
+
+a = [ 1, 2, 3, 4, 5]
+# add first
+a.unshift(0) #  [0, 1, 2, 3, 4, 5]
+# remove first
+a.shift #  [1, 2, 3, 4, 5]
+
+# add last
+a.push(6)  #  [1, 2, 3, 4, 5, 6]
+# remove last
+a.pop #  [1, 2, 3, 4, 5]
+
+=================================================
+a = [1,2,3]
+b = [4,5,6]
+
+a.concat([4,5,6]) # a = [1,2,3,4,5,6]
+a.replace(b) # a= [4, 5, 6]
+
+a = [1,2,3]
+b = [4,5,6]
+c = a.zip(b) # c = => [[1, 4], [2, 5], [3, 6]]
+d = c.flatten # d = [1, 4, 2, 5, 3, 6]
+
+a = "A String to reverse"
+b = a.reverse  # b = "esrever ot gnirtS A".reverse
+
+
+a = ["one", "day", "at", "the", "races"]
+b = a.join  # b = "onedayattheraces"
+b = a.join(" ")  #b = "one day at the races"
+a = Array.new(5)  { |w| "boing #{w}" }
+
+a = [1, 3, 4, 3, 2, 1]
+b = a.uniq # [1, 3, 4, 2]
+=================================================
+Filter:
+a = [1,2,3,4,5,6]
+
+a.each { |x| puts x*10} #  prints 10 thru 60
+# print value and index
+a.each_with_index { |x,i| puts "x is #{x}, i is  #{i}" }
+
+a.find{|n| n>3} # find first, 4
+a.find_all {|n| n>3} # find all [4, 5, 6]
+
+a.reject{ |n| n > 3} # [1,2,3]
+
+a.size # 6
+a.empty?  # false
+a.include?(3)  # true
+a.any?{ |n| n >77}  # false
+a.all?{ |n| n >3}  # false
+a.all?{ |n| n < 33}  # true
+
+
+
+["This", "is", "a", "bunch", "of", "words"].grep(/o/) # => ["of", "words"]
+
+["This", "is", "a", "bunch", "of", "words"].grep(/[o|i]/) # => ["This", "is", "of", "words"]
+
+["This", "is", "a", "bunch", "of", "words"].grep(/o/){|i| i.size} # => [2, 5]
+
+=================================================
+Map/Collect/Inject
+
+a = [1,2,3,4,5,6]
+a.map { |x| x *2 }  # => [2, 4, 6, 8, 10, 12]
+
+# change a = [2, 4, 6, 8, 10, 12]
+a.map! { |x| x*2}
+
+a.inject(0) { |sum, element| sum +element} # => 21
+
+a.inject(3){ |sum, element| puts "sum = #{sum}, element = #{element}"; sum += element }
+sum = 3, element = 1
+sum = 4, element = 2
+sum = 6, element = 3
+sum = 9, element = 4
+sum = 13, element = 5
+sum = 18, element = 6
+=> 24
+
+# create a new array that has the twice the values of a
+a.inject([]) { |result, item| result << item*2} # => [2, 4, 6, 8, 10, 12]
+=================================================
+
+Detection (any?, detect):
+# any elements have a 's' char
+["This", "is", "a", "bunch", "of", "words"].any?{|i| i =~ /s/} # => true
+["This", "is", "a", "bunch", "of", "words"].detect{|i| i == "bunch"} # => "bunch"
+["This", "is", "a", "bunch", "of", "words"].detect{|i| i == "foo"} # => nil
+
+=================================================
+Sorting (sort_by)::
+titles = jukebox.sort_by {|x| x.title }
+
+=================================================
+Partitioning:
+quick, dead = people.partition {|p| p.can_outrun? :bear  }
+
+Recombination:
+blind_dates = restaurants.zip(men, women)
+
+=================================================
+Idioms
+
+fruits = %w{apple banana}
+fruits += %w{ apple } unless fruits.include("apple")
+
+[2 4 7 88 -3].map(&:next)
+
+a, b, c = [1, 3,  8] # a = 1, b = 3, c = 8
+
+[ "foo", "bar", "tom"] is same as %w{ foo bar tom}
+# intersection of two arrays
+%w{ foo bar tom} & %w{ tom}  # => ["tom"]
+
+=================================================
+# union of two arrays
+%w{ foo bar tom} | %w{ tom joe} # => ["foo", "bar", "tom", "joe"]
+
+# difference btw two arrays
+%w{ foo bar tom} - %w{ tom joe} # => ["foo", "bar"]
+
+unshift - add to start of array, element [0]
+shift - remove from start of array
+push  - push to end of array
+pop - remove from end of array
+concat - add to array, NOT append
+replace - replace contents of array
+zip - merge array
+flatten - make an n-dimension array 1 dimension
+join - print string from array
+reverse
+uniq - find unique entries in the array
+each { |x| ...}
+each_with_index  { |x,i| ...}
+
+
+find(item) { |item| test } - find first
+[1, 4, 15, 33].find{|i| i%3 == 0}  => 15
+
+find_all(item) { |item| test } - find alls parameter
+select(item) { |item| test } - find alls parameter
+[1, 4, 15, 33].find_all{|i| i%3 != 0} # => [1, 4]
+[1, 4, 15, 33].select{|i| i%3 != 0} # => [1, 4]
+
+reject{ |x| test }  - find all but
+empty?  # return true if empty
+include?(item)  # return true if item is found
+
+
+any?{|item| test } # return true if at least one meets test
+all?{ |item| test } # return true if ALL items meet test
+
+# Symbol#to_proc
+# ONLY WORKS IN RAILS!!!!!
+# see Symbol#to_proc http://pragdave.pragprog.com/pragdave/2005/11/symbolto_proc.html
+# call size on each member of array
+%w{ foo bar tom}.map(&:size)
+
+map { |item| <code>} -  create a new array from code
+collect - same as above
+
+# sum is set to initial then for each item code will be eval'd
+# the value of the last line of code will be saved in sum for next
+# iteration/item. If initial is missing then 1st value in collection will
+# be the initial by default
+inject (initial){ |sum, item| <code> }
+
+[3, 4, 7].inject([]){|sum, item| sum <<  item*item} # => [9, 16, 49]
+
+
+============================================
+splat operator
+============================================
+def my_method do
+     fruits = %w{apple banana}
+      a, b = *fruits
+      p a
+      p b
+end
+my_methods
+"apple"
+"banana"
+=> nil
+
+def my_method do
+     *fruits = 'mango', 'orange'
+      p fruits[0]
+      p fruits[1]
+end
+my_method
+"mango"
+"orange"
+=> nil
+
+# variable parameter values
+def my_favorites(*fruits)
+    fruits
+end
+
+def my_favorites(*fruits) do
+      fruits
+end
+p my_favorites(:mango, :orange, :banana) # => [:mango, :orange, :banana]
+
+
+============================================
+splat operator to choose a case
+============================================
+name = "Porky"
+
+COMEDIANS = ["Bugs Bunny", "Daffy Duck", "Porky"]
+HEROES = ['Jackie', 'Rock', 'Sly']
+
+case name
+when *COMEDIANS # NOTICE the splat operatro
+     p "You are a comedian" # this will get invoked
+when *HEROES
+     p "You are a action hero"
+end

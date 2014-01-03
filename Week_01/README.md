@@ -61,7 +61,7 @@
   </tr>
   <tr> <!-- AM Lesson/Lab -->
     <td>10:00 - 12:30</td>
-    <td>
+    <td> <!-- Monday -->
       <ol>
         <li>
           <i>Intro and Class Culture</i>
@@ -74,7 +74,32 @@
         </li>
       </ol>
     </td>
-    <td></td>
+    <td><!-- Tuesday -->
+      <ol>
+        <li>
+          <a href="http://tryruby.org">Try Ruby</a>
+        </li>
+        <li>
+          <a href="http://www.zenspider.com/Languages/Ruby/QuickRef.html">Ruby Basics</a>
+        </li>
+        <li>
+          <a href="Strings.txt">Strings</a>
+        </li>
+        <li>
+          <a href="Arrays.txt">Arrays</a>
+        </li>
+        <li>
+          <a href="Hashes.txt">Arrays</a>
+        </li>
+        <li>
+          1helloword.rb
+        </li>
+        <li>
+          2helloname.rb
+        </li>
+
+      </ol>
+    </td>
     <td></td>
     <td></td>
     <td></td>
@@ -91,7 +116,11 @@
         </li>
       </ol>
     </td>
-    <td></td>
+    <td>
+      <ol>
+        <li> 
+      </ol>
+    </td>
     <td></td>
     <td></td>
     <td></td>

@@ -1,0 +1,77 @@
+update(hash) - change/update with values from hash
+merge(hash) - create a new hash from 2 hashes
+invert - swap keys and values
+clear - remove all key and values
+replace(hash) - replace current key/values
+keys - give me an array of all keys
+values - give me an array of all values
+each_key { |k| ... }
+each_value { |v| ... }
+map{ |k,v| ... } # create and array from result
+
+has_key?(key) # true if hash has the key
+include?(key) # same as above
+key?(key)  # same as above
+member?(key) # same as above
+
+has_value?(value) # true if hash has the value
+value?(value) # same as above
+
+empty? # true if hash is empty
+h.size # number of elements in hash
+==================================================
+Creation:
+
+h = {}
+h = Hash.new
+h = Hash["key1" => "value1", "key2" => "value2", "key3" => "value3"]
+
+==================================================
+Accessors:
+
+h = {"key1" => "value1", "key2" => "value2", "key3" => "value3"}
+
+h["key1"]  # value = "value1"
+h.values_at("key1", "key3")  # ["value1", "value3"]
+
+
+h.["no key"] # nil
+
+==================================================
+Combine Hashes:
+
+h1 = { "Smith" => "John", "Jones" => "Jane"}
+h2 = { "Smith" => "Jim"}
+
+# overwrite/update h1 "Smith" with "Jim"
+h1.update(h2) # {"Jones"=>"Jane", "Smith"=>"Jim"}
+
+# create a new hash from the merged hashes, doesn't change h1
+h3 = h1.merge({"Jones" => "Tom"}) # h3 = {"Jones"=>"Tom", "Smith"=>"Jim"}
+
+==================================================
+Transformations:
+
+
+h1 = { 1 => "one", 2 => "two" }
+
+# flip the keys with values
+h2.invert # h2 is {"two"=>2, "one"=>1}
+
+h1.clear # clear the hash
+
+h1 = { 1 => "one", 2 => "two" }
+
+# {33=>"num", "foo"=>"bar"}
+h1.replace({ "foo" => "bar", 33 => "num"})
+
+h1.keys # [33, "foo"]
+h1.values # ["num", "bar"]
+h1.each_key { |k| puts k } # print each key
+h1.each_value { |v| puts v } # print each value
+
+h1 = { 1 => "one", 2 => "two", 3 => "three"}
+h2 = h1.find_all { |k,v| k > 1 } # h2 = [[2, "two"], [3, "three"]]
+
+# h1 = ["ONE", "TWO", "THREE"]
+h1 = { 1 => "one", 2 => "two", 3 => "three" }.map { |k,v| v.upcase }

@@ -1,0 +1,155 @@
+
+def my_method(my_var)
+   my_var ||="no" # my_var =  my_var || "no"
+end
+
+my_method("tom") # => "tom"
+my_method(false) # => "no"
+
+============================================
+Return values
+============================================
+def foo 
+    "this", 33
+end
+a, b = foo # a = "this", b = 33
+
+def test; [10, "tintin"]; end
+var, str = test # var = 10, str = "tintin"
+
+============================================
+splat operator
+============================================
+def my_method; fruits = %w{apple banana}; a, b = *fruits; p a; p b; end;
+my_methods
+"apple"
+"banana"
+=> nil
+
+def my_method; *fruits = 'mango', 'orange'; p fruits[0]; p fruits[1]; end
+my_method
+"mango"
+"orange"
+=> nil
+
+# variable parameter values 
+def my_favorites(*fruits) 
+    fruits
+end
+
+def my_favorites(*fruits);  fruits; end
+p my_favorites(:mango, :orange, :banana) # => [:mango, :orange, :banana]
+
+============================================
+Blocks
+============================================
+do |a, b| 
+   # code using a,b
+end
+
+OR 
+{ |a, b| #code using a,b }
+
+============================================
+Group By
+============================================
+# gives me a hash where the key is the class and the value is the
+# collect of objects of that type in the array
+array.group_by{ |a| a.type}
+
+============================================
+Proc
+============================================
+p = proc { |i, j| i + j }
+p.call(1, 2)  # => 3
+
+============================================
+Inject
+============================================
+(1..10).inject([]){|array, item| array << item} # => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+============================================
+a,b = 0, 1
+a,b = b, a # swap a and b
+a,b = [1,2,3] # a = 1, b = 2
+a,b,c = [1,2] # a = 1, b = 2, c = nil
+
+a,*b = [1,2,3] # a = 1, b = [2,3]
+
+============================================
+Hash parameters
+============================================
+
+
+def image(opt={})
+      default_opt = {:height => 25, :width => 10}
+      default_opt.merge! opt
+end
+
+============================================
+Duck typing
+============================================
+a = []
+if a.respond_to? :<< then a << 1
+
+============================================
+Singleton, Metaclasses
+============================================
+# get the metaclass, singleton
+class << self; self; end
+
+class Foo
+      class << self 
+      # adding methods to the singleton/metaclass of 
+      # Foo
+        def some_method()
+        end
+      end
+end       
+
+============================================
+Symbol to Proc
+============================================
+(1..10).map(&:succ)
+
+To use outside of Rails
+#gem install facets
+require 'facet/symbol/to_proc'
+
+============================================
+Regex
+============================================
+"bugs funny bunny" =~ /bugs (.+) bunny/ # $1 is "funny"
+
+m = "bugs funny bunny".match(/bugs (.+) bunny/)
+=> #<MatchData:0x33f0cc>
+m[0]
+=> "bugs funny bunny"
+m[1]
+=> "funny"
+m[2]
+=> nil
+$1
+=> "funny"
+
+m, kind = "bugs funny bunny".match(/bugs (.+) bunny/)
+
+============================================
+
+============================================
+(1..10).inject(0){|sum, number| sum + number}
+
+============================================
+splat operator to choose a case
+============================================
+name = "Porky"
+
+COMEDIANS = ["Bugs Bunny", "Daffy Duck", "Porky"]
+HEROES = ['Jackie', 'Rock', 'Sly']
+
+case name
+when *COMEDIANS # NOTICE the splat operatro
+     p "You are a comedian" # this will get invoked
+when *HEROES
+     p "You are a action hero"
+end

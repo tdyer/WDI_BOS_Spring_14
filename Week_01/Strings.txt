@@ -1,0 +1,64 @@
+===================================
+Operations:
+
+Most operations don't change the orginal string.
+Unless the bang ! is used or the method implies it, replace method.
+
+"a" + "b" # created a new string "ab"
+"a" << "b" # append to the string "a"
+"a#{b}"    # sting interpolation, also creates a new string.
+
+# Massaging strings
+# Default will create a new string. For in-place changes add bang ! to method name
+
+capitilize	"tom".captilize = "Tom"
+upcase		"tom".upcase = "TOM"
+downcase	"TOM".downcase = "tom"
+swapcase	"tom".swapcase = "TOM"
+strip		 lose the outer spaces  ".strip = "lose the outer spaces"
+rstrip		 " lose the right spaces    ".rstrip = " lose the right spaces"
+lstrip		 " lose the left spaces    ".lstrip = "lose the left spaces  "
+chop		 "remove the last character".chop = "remove the last characte"
+chomp		 "remove trailing newline\n".chomp
+reverse		 " gnirts eht esrever".reverse = "reverse the string"
+
+# Getting character
+"foobar"[3] = 98 # ascii number for 'b'
+"foobar"[3].chr = "b"
+"foobar"[3,1] = "b"
+"foobar"[-2].chr = "a"
+
+# Getting Substrings
+foo = "bar"
+"This is a string"[5, 4] = "is a"
+"this is a string"[5, 4] = "blah blah"
+
+# Replacement
+foo.replace "huh"  # foo's value is now "huh"
+foo = "This is a string"
+foo[5, 4] = "blah at"
+foo # "This blah at  string"
+
+# Equality
+"a" == "a" # true
+"a".equal? "a" # false, they are not the place in memory. different obj ids
+
+# Comparision
+<=> spaceship operator, return -1, 0, 1 for less than, equal to, greater than
+
+
+Strings and Symbols.
+===================================
+Quotes:
+Use single quotes ' to create string that is literal. No #{foobar} and \ is not interpreted.
+
+%q = single quoted ex: %q{ 'single quoted text' doesn't need to be escaped}
+%Q = double quoted ex: %Q{ "doublee quoted text" doesn't need to be escaped}
+Don't need to use curly braces. Uses dot . as delimeter here.
+%q = single quoted ex: %q. 'single quoted text' doesn't need to be escaped.
+# here document
+mystring = <<EOF
+this is a
+mulitword
+sting
+EOF
